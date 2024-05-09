@@ -154,7 +154,7 @@ body {
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: 100px solid #423f3f; /* 箭头颜色 */
+  border-top: 70px solid #423f3f; /* 箭头颜色 */
 }
 #interpolation-image-wrapper {
   width: 100%;
