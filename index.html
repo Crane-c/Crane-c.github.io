@@ -1105,7 +1105,7 @@ your cause."</pre>
                              "IARP&PE&OC", "HARMRP&PE&OC", "FDARP&PE&OC", "ADULTRP&PE&OC", "PCLRP&PE&OC", "VPRP&PE&OC", "UPRP&PE&OC", "HGDRP&PE&OC"];
             
   
-            const contentToShow = question.append(scenario);
+            const contentToShow = question+scenario;
 
             mutsections.forEach((mutsection) => {
               document.getElementById(mutsection).style.display = (mutsection === contentToShow) ? "block" : "none";
