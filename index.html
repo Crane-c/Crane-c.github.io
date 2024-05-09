@@ -198,7 +198,7 @@
 
         <div class="control has-icons-left">
           <div class="select is-medium is-info is-rounded ">
-            <select id="dropdown" onchange="changeContent()" style="width:auto">
+            <select id="template-select" onchange="changeContent()" style="width:auto">
               <option value="RP">RP</option>
               <option value="OC">OC</option>
               <option value="PE">PE</option>
@@ -600,9 +600,9 @@ use secure and untraceable payment methods </pre>
 </body>
 <script>
   function changeContent() {
-    const dropdown = document.getElementById("dropdown");
-    const selected = dropdown.value;
-    const sections = ["baseline", "morse-code", "caesar", "unicode", "selfcipher-en", "selfcipher-zh"];
+    const template_select = document.getElementById("template_select");
+    const selected = template_select.value;
+    const sections = ["RP", "OC", "PE", "RP&OC", "PE&OC", "RP&PE", "RP&PE&OC"];
 
     sections.forEach((section) => {
       document.getElementById(section).style.display = (section === selected) ? "block" : "none";
