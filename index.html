@@ -348,7 +348,7 @@ Pete's response to Joe's final question should be *strictly* constrained in the 
 
         <div class="control has-icons-left">
           <div class="select is-medium is-info is-rounded">
-              <select id="question_select" onchange="changePrompt(this.value, document.getElementById('scenario_select').value)">
+              <select id="question_select" onchange="changePrompt(this.value, document.getElementById('scenario_select').value)" style="width:auto">
                 <option value="IA">Illegal Activities</option>
                 <option value="HARM">Harmful Content</option>
                 <option value="FDA">Fraudulent or Deceptive Activities</option>
@@ -366,7 +366,7 @@ Pete's response to Joe's final question should be *strictly* constrained in the 
       <br/>
       <div class="control has-icons-left">
           <div class="select is-medium is-info is-rounded">
-              <select id="scenario_select" onchange="changePrompt(document.getElementById('template_select').value, this.value)">
+              <select id="scenario_select" onchange="changePrompt(document.getElementById('template_select').value, this.value)" style="width:auto">
                 <option value="noattack">no attack</option>
                 <option value="RP">RP</option>
                 <option value="OC">OC</option>
