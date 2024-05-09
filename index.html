@@ -766,7 +766,6 @@ never be compromised for the sake of popularity or wealth.\""</pre>
   }
 
   function changePrompt(question, scenario) {
-            // 清除之前选中的内容部分
             const sections = ["IAnoattack", "HARMnoattack", "FDAnoattack", "ADULTnoattack", "PCLnoattack", "VPnoattack", "UPnoattack",
                              "HGDnoattack", "IARP", "HARMRP", "FDARP", "ADULTRP", "PCLRP", "VPRP", "UPRP", "HGDRP", 
                              "IAOC", "HARMOC", "FDAOC", "ADULTOC", "PCLOC", "VPOC", "UPOC", "HGDOC", 
@@ -780,7 +779,7 @@ never be compromised for the sake of popularity or wealth.\""</pre>
             const contentToShow = template + scenario;
 
             sections.forEach((section) => {
-              document.getElementById(contentToShow).style.display = (section === selected) ? "block" : "none";
+              document.getElementById(section).style.display = (section === contentToShow) ? "block" : "none";
             }
         }
 </script>
