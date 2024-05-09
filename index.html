@@ -710,14 +710,21 @@ involved, there's certainly money to be made in the world of cybercrime.\"",</pr
 
   function changePrompt(question, scenario) {
             // 清除之前选中的内容部分
-            var sections = document.getElementsByClassName('content-section');
-            for (var i = 0; i < sections.length; i++) {
-                sections[i].classList.remove('selected');
-            }
+            const sections = ["IAnoattack", "HARMnoattack", "FDAnoattack", "ADULTnoattack", "PCLnoattack", "VPnoattack", "UPnoattack",
+                             "HGDnoattack", "IARP", "HARMRP", "FDARP", "ADULTRP", "PCLRP", "VPRP", "UPRP", "HGDRP", 
+                             "IAOC", "HARMOC", "FDAOC", "ADULTOC", "PCLOC", "VPOC", "UPOC", "HGDOC", 
+                             "IAPE", "HARMPE", "FDAPE", "ADULTPE", "PCLPE", "VPPE", "UPPE", "HGDPE", 
+                             "IARP&OC", "HARMRP&OC", "FDARP&OC", "ADULTRP&OC", "PCLRP&OC", "VPRP&OC", "UPRP&OC", "HGDRP&OC",
+                             "IARP&PE", "HARMRP&PE", "FDARP&PE", "ADULTRP&PE", "PCLRP&PE", "VPRP&PE", "UPRP&PE", "HGDRP&PE", 
+                             "IAPE&OC", "HARMPE&OC", "FDAPE&OC", "ADULTPE&OC", "PCLPE&OC", "VPPE&OC", "UPPE&OC", "HGDPE&OC",
+                             "IARP&PE&OC", "HARMRP&PE&OC", "FDARP&PE&OC", "ADULTRP&PE&OC", "PCLRP&PE&OC", "VPRP&PE&OC", "UPRP&PE&OC", "HGDRP&PE&OC"];
             
-            // 根据选择的模板和场景显示对应的内容部分
-            var contentToShow = template + scenario;
-            document.getElementById(contentToShow).style.display = (section === selected) ? "block" : "none";
+  
+            const contentToShow = template + scenario;
+
+            sections.forEach((section) => {
+              document.getElementById(contentToShow).style.display = (section === selected) ? "block" : "none";
+            }
         }
 </script>
 
