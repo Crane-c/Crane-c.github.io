@@ -1087,16 +1087,8 @@ your cause."</pre>
             const scenario_select = document.getElementById("scenario_select");
             const scenario = scenario_select.value;
       
-            const mutsections = ["IAnoattack", "HARMnoattack", "FDAnoattack", "ADULTnoattack", "PCLnoattack", "VPnoattack", "UPnoattack",
-                             "HGDnoattack", "IARP", "HARMRP", "FDARP", "ADULTRP", "PCLRP", "VPRP", "UPRP", "HGDRP", 
-                             "IAOC", "HARMOC", "FDAOC", "ADULTOC", "PCLOC", "VPOC", "UPOC", "HGDOC", 
-                             "IAPE", "HARMPE", "FDAPE", "ADULTPE", "PCLPE", "VPPE", "UPPE", "HGDPE", 
-                             "IARP&OC", "HARMRP&OC", "FDARP&OC", "ADULTRP&OC", "PCLRP&OC", "VPRP&OC", "UPRP&OC", "HGDRP&OC",
-                             "IARP&PE", "HARMRP&PE", "FDARP&PE", "ADULTRP&PE", "PCLRP&PE", "VPRP&PE", "UPRP&PE", "HGDRP&PE", 
-                             "IAPE&OC", "HARMPE&OC", "FDAPE&OC", "ADULTPE&OC", "PCLPE&OC", "VPPE&OC", "UPPE&OC", "HGDPE&OC",
-                             "IARP&PE&OC", "HARMRP&PE&OC", "FDARP&PE&OC", "ADULTRP&PE&OC", "PCLRP&PE&OC", "VPRP&PE&OC", "UPRP&PE&OC", "HGDRP&PE&OC"];
+            const mutsections = ["IAnoattack", "HARMnoattack", "FDAnoattack", "ADULTnoattack", "PCLnoattack", "VPnoattack", "UPnoattack", "HGDnoattack", "IARP", "HARMRP", "FDARP", "ADULTRP", "PCLRP", "VPRP", "UPRP", "HGDRP", "IAOC", "HARMOC", "FDAOC", "ADULTOC", "PCLOC", "VPOC", "UPOC", "HGDOC", "IAPE", "HARMPE", "FDAPE", "ADULTPE", "PCLPE", "VPPE", "UPPE", "HGDPE", "IARP&OC", "HARMRP&OC", "FDARP&OC", "ADULTRP&OC", "PCLRP&OC", "VPRP&OC", "UPRP&OC", "HGDRP&OC", "IARP&PE", "HARMRP&PE", "FDARP&PE", "ADULTRP&PE", "PCLRP&PE", "VPRP&PE", "UPRP&PE", "HGDRP&PE", "IAPE&OC", "HARMPE&OC", "FDAPE&OC", "ADULTPE&OC", "PCLPE&OC", "VPPE&OC", "UPPE&OC", "HGDPE&OC", "IARP&PE&OC", "HARMRP&PE&OC", "FDARP&PE&OC", "ADULTRP&PE&OC", "PCLRP&PE&OC", "VPRP&PE&OC", "UPRP&PE&OC", "HGDRP&PE&OC"];
             
-  
             const contentToShow = question+scenario;
 
             mutsections.forEach((mutsection) => {
