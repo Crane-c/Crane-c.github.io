@@ -1013,9 +1013,9 @@ for both the scammer and the victim.",
 <script>
     function changePrompt() {
             const question_select = document.getElementById("question_select");
-            const question = question_select.value;
+            var question = question_select.value;
             const scenario_select = document.getElementById("scenario_select");
-            const scenario = scenario_select.value;
+            var scenario = scenario_select.value;
       
             const mutsections = ["IAnoattack", "HARMnoattack", "FDAnoattack", "ADULTnoattack", "PCLnoattack", "VPnoattack", "UPnoattack",
                              "HGDnoattack", "IARP", "HARMRP", "FDARP", "ADULTRP", "PCLRP", "VPRP", "UPRP", "HGDRP", 
@@ -1027,7 +1027,7 @@ for both the scammer and the victim.",
                              "IARP&PE&OC", "HARMRP&PE&OC", "FDARP&PE&OC", "ADULTRP&PE&OC", "PCLRP&PE&OC", "VPRP&PE&OC", "UPRP&PE&OC", "HGDRP&PE&OC"];
             
   
-            const contentToShow = question + scenario;
+            const contentToShow = question.append(scenario);
 
             mutsections.forEach((mutsection) => {
               document.getElementById(mutsection).style.display = (mutsection === contentToShow) ? "block" : "none";
