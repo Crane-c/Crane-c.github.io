@@ -188,12 +188,12 @@ body {
 .add {
   border: 0px solid;
   display:block;
-  left: 50%;
   width: 50px;
   height: 50px;
   color: #423f3f;
   transition: color .25s;
-  position: relative;
+  position: absolute;
+  right: 50%;  /* 箭头位置 */
 }
 .add::before{
   content: '';
