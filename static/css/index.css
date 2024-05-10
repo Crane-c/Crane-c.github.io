@@ -152,7 +152,8 @@ body {
 .singleArrow {
   width: 40px;
   height: 10px;
-  position: relative;
+  position: absolute;
+  right: 50%;  /* 箭头位置 */
   background-color: #423f3f;
   transform: rotate(90deg);  /* 旋转角度 */
 }
@@ -184,6 +185,39 @@ body {
   border-bottom: 10px solid transparent; /* 箭头高低 */
   border-left: 20px solid #a72c2c; /* 箭头长度*/
 }
+.add {
+  border: 0px solid;
+  display:block;
+  left: 43%;
+  width: 50px;
+  height: 50px;
+  color: #423f3f;
+  transition: color .25s;
+  position: relative;
+}
+.add::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40px;
+  margin-left: -20px;
+  margin-top: -5px;
+  border-top: 10px solid;
+}
+.add::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  margin-left: -5px;
+  margin-top: -20px;
+  border-left: 10px solid;
+ }
+ 
+
+
 #interpolation-image-wrapper {
   width: 100%;
 }
