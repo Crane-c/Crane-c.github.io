@@ -216,6 +216,17 @@ body {
   border-left: 10px solid;
  }
  
+ .container{
+	width: 678px;
+    margin: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 3px;
+    padding: 10px 6px;
+}
+.container pre{
+	white-space: pre-wrap; 
+  word-wrap: break-word; 
+}
 
 
 #interpolation-image-wrapper {
