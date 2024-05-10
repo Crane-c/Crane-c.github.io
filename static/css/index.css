@@ -221,6 +221,7 @@ body {
 .container pre{
 	white-space: pre-wrap; 
   word-wrap: break-word; 
+  font-family: Arial;
 }
 
 
