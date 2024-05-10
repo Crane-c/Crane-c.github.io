@@ -149,12 +149,22 @@ body {
   margin: 0 !important;
 }
 
-.arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 70px solid #423f3f; /* 箭头颜色 */
+.singleArrow {
+  width: 40px;
+  height: 10px;
+  position: relative;
+  background-color: #423f3f;
+  transform: rotate(90deg);  /* 旋转角度 */
+}
+.singleArrow::after {
+  content: '';
+  /*display: block;*/
+  position: absolute;
+  right: -20px;  /* 箭头位置 */
+  top: -5px;  /* 箭头位置 */
+  border-top: 10px solid transparent; 	/* 箭头高低 */
+  border-bottom: 10px solid transparent; /* 箭头高低 */
+  border-left: 20px solid #423f3f; /* 箭头长度*/
 }
 #interpolation-image-wrapper {
   width: 100%;
