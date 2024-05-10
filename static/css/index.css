@@ -192,7 +192,7 @@ body {
   height: 50px;
   color: #423f3f;
   transition: color .25s;
-  position: absolute;
+  position: relative;
   right: 45%;  /* 箭头位置 */
 }
 .add::before{
