@@ -193,7 +193,7 @@ body {
   color: #423f3f;
   transition: color .25s;
   position: absolute;
-  right: 50%;  /* 箭头位置 */
+  right: 45%;  /* 箭头位置 */
 }
 .add::before{
   content: '';
