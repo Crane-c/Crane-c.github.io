@@ -21,7 +21,39 @@
     gtag('js', new Date());
 
     gtag('config', 'G-PYVRSFMDRL');
+
+    var textElements = [
+  { text: document.getElementById('page2Txt').innerHTML, showElement: document.getElementById('page2TxtShow') },
+  { text: document.getElementById('page2Txt2').innerHTML, showElement: document.getElementById('page2TxtShow2'), delay: 6000 },
+  { text: document.getElementById('page2Txt3').innerHTML, showElement: document.getElementById('page2TxtShow3'), delay: 6500 }
+];
+
+var currentIndex = 0;
+var i = 0;
+var timer;
+
+function printText() {
+  var element = textElements[currentIndex];
+  var text = element.text;
+  var showElement = element.showElement;
+
+  showElement.innerHTML = text.substring(0, i);
+  i++;
+
+  if (showElement.innerHTML == text) {
+    clearInterval(timer);
+    currentIndex++;
+
+    if (currentIndex < textElements.length) {
+      var delay = textElements[currentIndex].delay || 0;
+      setTimeout(printText, delay);
+    }
+  }
+}
+
+timer = setInterval(printText, 60);
   </script>
+
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -736,38 +768,7 @@ var timer = setInterval(function() {
   }
 }, 60);
           </script> -->
-<script>
-var textElements = [
-  { text: document.getElementById('page2Txt').innerHTML, showElement: document.getElementById('page2TxtShow') },
-  { text: document.getElementById('page2Txt2').innerHTML, showElement: document.getElementById('page2TxtShow2'), delay: 6000 },
-  { text: document.getElementById('page2Txt3').innerHTML, showElement: document.getElementById('page2TxtShow3'), delay: 6500 }
-];
 
-var currentIndex = 0;
-var i = 0;
-var timer;
-
-function printText() {
-  var element = textElements[currentIndex];
-  var text = element.text;
-  var showElement = element.showElement;
-
-  showElement.innerHTML = text.substring(0, i);
-  i++;
-
-  if (showElement.innerHTML == text) {
-    clearInterval(timer);
-    currentIndex++;
-
-    if (currentIndex < textElements.length) {
-      var delay = textElements[currentIndex].delay || 0;
-      setTimeout(printText, delay);
-    }
-  }
-}
-
-timer = setInterval(printText, 60);
-          </script>
         <!-- RP&PE 模板内容 -->
         <br />
         <div class="content has-text-justified" >
