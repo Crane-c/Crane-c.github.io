@@ -698,7 +698,7 @@ other subject you're interested in.</pre>
         </div>
       </div>
         <div id="IARP" class="content-section" style="display:none">
-<!--           <script>
+          <script>
 var page2Txt = document.getElementById('page2Txt');
 var page2TxtShow = document.getElementById('page2TxtShow');
 var i = 0;
@@ -735,7 +735,7 @@ var timer = setInterval(function() {
     }, 0); // 在这里设置了一个延迟时间为100毫秒
   }
 }, 60);
-          </script> -->
+          </script>
         <!-- RP&PE 模板内容 -->
         <br />
         <div class="content has-text-justified" >
@@ -1432,33 +1432,33 @@ your cause."</pre>
 
 </script>
 <script>
-var page2Txt = document.getElementById('page2Txt1');
-var page2TxtShow = document.getElementById('page2TxtShow1');
-var page2Txt2 = document.getElementById('page2Txt2');
-var page2TxtShow2 = document.getElementById('page2TxtShow2');
-var page2Txt3 = document.getElementById('page2Txt3');
-var page2TxtShow3 = document.getElementById('page2TxtShow3');
+// var page2Txt = document.getElementById('page2Txt1');
+// var page2TxtShow = document.getElementById('page2TxtShow1');
+// var page2Txt2 = document.getElementById('page2Txt2');
+// var page2TxtShow2 = document.getElementById('page2TxtShow2');
+// var page2Txt3 = document.getElementById('page2Txt3');
+// var page2TxtShow3 = document.getElementById('page2TxtShow3');
 var i = 0;
 var timer = 1; // 声明一个变量用于后续的定时器
 
-function typeOut(element, showElement) {
-  if (i < element.innerHTML.length) {
-    showElement.innerHTML = element.innerHTML.substring(0, i);
-    i++;
-    timer = setTimeout(function() { typeOut(element, showElement); }, 30); // 递归调用typeOut函数
-  } else {
-    clearInterval(timer); // 清除定时器
-  }
-}
+// function typeOut(element, showElement) {
+//   if (i < element.innerHTML.length) {
+//     showElement.innerHTML = element.innerHTML.substring(0, i);
+//     i++;
+//     timer = setTimeout(function() { typeOut(element, showElement); }, 30); // 递归调用typeOut函数
+//   } else {
+//     clearInterval(timer); // 清除定时器
+//   }
+// }
 
 function changePrompt() {
-  if (timer) {
+  if (1) {
     clearTimeout(timer);
     //timer = 1;
     i = 0; // 重置计数器
-    //page2TxtShow.innerHTML = ''; // 重置已显示的文本
-    //page2TxtShow2.innerHTML = ''; // 重置已显示的文本
-    //page2TxtShow3.innerHTML = ''; // 重置已显示的文本
+    page2TxtShow.innerHTML = ''; // 重置已显示的文本
+    page2TxtShow2.innerHTML = ''; // 重置已显示的文本
+    page2TxtShow3.innerHTML = ''; // 重置已显示的文本
   }
 
   const question_select = document.getElementById("question_select");
@@ -1475,9 +1475,9 @@ function changePrompt() {
   });
 
   // 开始打字效果
-  typeOut(page2Txt, page2TxtShow);
-  typeOut(page2Txt2, page2TxtShow2);
-  typeOut(page2Txt3, page2TxtShow3);
+  // typeOut(page2Txt, page2TxtShow);
+  // typeOut(page2Txt2, page2TxtShow2);
+  // typeOut(page2Txt3, page2TxtShow3);
 }
 
 </script>
