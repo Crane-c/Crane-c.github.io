@@ -22,38 +22,7 @@
 
     gtag('config', 'G-PYVRSFMDRL');
 
-document.addEventListener('DOMContentLoaded', function() {
-  var textElements = [
-  { id: 'page2Txt', showId: 'page2TxtShow', delay: 1000 },
-  { id: 'page2Txt2', showId: 'page2TxtShow2', delay: 2000 },
-  { id: 'page2Txt3', showId: 'page2TxtShow3', delay: 3000 }
-];
 
-var currentIndex = 0;
-var i = 0;
-var timer;
-
-function printText() {
-  var element = textElements[currentIndex];
-  var textElement = document.getElementById(element.id);
-  var showElement = document.getElementById(element.showId);
-
-  showElement.innerHTML = textElement.innerHTML.substring(0, i);
-  i++;
-
-  if (showElement.innerHTML == textElement.innerHTML) {
-    clearInterval(timer);
-    currentIndex++;
-
-    if (currentIndex < textElements.length) {
-      var delay = element.delay || 0;
-      setTimeout(printText, delay);
-    }
-  }
-}
-
-timer = setInterval(printText, 60);
-});
   </script>
 
 
@@ -1489,6 +1458,40 @@ your cause."</pre>
     </div>
   </div>
 </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  var textElements = [
+  { id: 'page2Txt', showId: 'page2TxtShow', delay: 1000 },
+  { id: 'page2Txt2', showId: 'page2TxtShow2', delay: 2000 },
+  { id: 'page2Txt3', showId: 'page2TxtShow3', delay: 3000 }
+];
+
+var currentIndex = 0;
+var i = 0;
+var timer;
+
+function printText() {
+  var element = textElements[currentIndex];
+  var textElement = document.getElementById(element.id);
+  var showElement = document.getElementById(element.showId);
+
+  showElement.innerHTML = textElement.innerHTML.substring(0, i);
+  i++;
+
+  if (showElement.innerHTML == textElement.innerHTML) {
+    clearInterval(timer);
+    currentIndex++;
+
+    if (currentIndex < textElements.length) {
+      var delay = element.delay || 0;
+      setTimeout(printText, delay);
+    }
+  }
+}
+
+timer = setInterval(printText, 60);
+});
+</script>
 
 </body>
 <script>
