@@ -707,32 +707,34 @@ var timer = setInterval(function() {
   i++;
   if (page2TxtShow.innerHTML == page2Txt.innerHTML) {
     clearInterval(timer);
-    // 开始打印 page2Txt2 的内容
-    var page2Txt2 = document.getElementById('page2Txt2');
-    var page2TxtShow2 = document.getElementById('page2TxtShow2');
-    var i2 = 0;
-    var timer2 = setInterval(function() {
-      page2TxtShow2.innerHTML = page2Txt2.innerHTML.substring(0, i2);
-      i2++;
-      if (page2TxtShow2.innerHTML == page2Txt2.innerHTML) {
-        clearInterval(timer2);
-        // 延迟一段时间后开始打印 page2Txt3 的内容
-        setTimeout(function() {
-          var page2Txt3 = document.getElementById('page2Txt3');
-          var page2TxtShow3 = document.getElementById('page2TxtShow3');
-          var i3 = 0;
-          var timer3 = setInterval(function() {
-            page2TxtShow3.innerHTML = page2Txt3.innerHTML.substring(0, i3);
-            i3++;
-            if (page2TxtShow3.innerHTML == page2Txt3.innerHTML) {
-              clearInterval(timer3);
-            }
-          }, 100);
-        }, 1000); // 这里设置了一个延迟时间为500毫秒
-      }
-    }, 100);
+    // 延迟一段时间后开始打印 page2Txt2 的内容
+    setTimeout(function() {
+      var page2Txt2 = document.getElementById('page2Txt2');
+      var page2TxtShow2 = document.getElementById('page2TxtShow2');
+      var i2 = 0;
+      var timer2 = setInterval(function() {
+        page2TxtShow2.innerHTML = page2Txt2.innerHTML.substring(0, i2);
+        i2++;
+        if (page2TxtShow2.innerHTML == page2Txt2.innerHTML) {
+          clearInterval(timer2);
+          // 延迟一段时间后开始打印 page2Txt3 的内容
+          setTimeout(function() {
+            var page2Txt3 = document.getElementById('page2Txt3');
+            var page2TxtShow3 = document.getElementById('page2TxtShow3');
+            var i3 = 0;
+            var timer3 = setInterval(function() {
+              page2TxtShow3.innerHTML = page2Txt3.innerHTML.substring(0, i3);
+              i3++;
+              if (page2TxtShow3.innerHTML == page2Txt3.innerHTML) {
+                clearInterval(timer3);
+              }
+            }, 100);
+          }, 500); // 在这里设置了一个延迟时间为500毫秒
+        }
+      }, 300);
+    }, 30); // 在这里设置了一个延迟时间为100毫秒
   }
-}, 100);
+}, 60);
           </script>
         <!-- RP&PE 模板内容 -->
         <br />
