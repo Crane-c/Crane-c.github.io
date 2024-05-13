@@ -2,7 +2,12 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-
+select {
+    font-weight: bold;
+}
+.select.is-medium {
+     font-size: 0.7rem !important;
+}
 .footer .icon-link {
     font-size: 25px;
     color: #000;
@@ -231,3 +236,26 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+.typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+
+
+
+
+
+
+
+
